@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    {% include head.html %}
+    <script src="{{site.url}}{{site.baseurl}}/assets/js/archive.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row  " style="margin-top: 50px;position: relative">
+        <div class="col-3 rounded  col-left " style="background-color: white;height: 100%;position: absolute;">
+            {% include category.html %}
+            {% include featured-tags.html %}
+        </div>
+        <div class="col-9 rounded " style="background-color: white;height:auto;margin-left: 25%!important;min-height: 1200px">
+            <div class="text-center icon-button">
+                <h1 class="">{{page.title}}</h1>
+                <a class="" href="{{site.url}}{{site.baseurl}}/">
+                    <i class="fa fa-home fa-2x"></i>
+                </a>
+            </div>
+
+            {% for post in site.posts %}
+            <div class="card shadow post-list post-none animated fadeInLeft" tags="{{post.tags| join: ','}}">
+                <div>
+                    <a href="{{site.url}}{{site.baseurl}}{{post.url}}"><h5>{{post.title}}</h5></a>
+                </div>
+                <div class="excerpt">
+                    {{post.excerpt}}
+                </div>
+                <div style="font-size: 50%;">
+                    <a href="{{site.url}}{{site.baseurl}}/category/?category={{post.category}}">{{post.category}}</a>
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>{{post.date|date:"%Y/%m/%d %H:%m"}}
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+{% include footer.html %}
+</body>
+</html>

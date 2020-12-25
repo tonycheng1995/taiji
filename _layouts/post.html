@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    {% include head.html %}
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      inlineMath: [['$','$']]
+    }
+  });
+</script>
+</head>
+<body>
+<div class="container">
+    <div class="row rounded" style="min-height: 600px;background-color: white;margin-top: 50px;">
+        <div class="col-3 toc">
+            <h4 class="text-center">快速导航</h4>
+            {% include toc.html html = content h_min=1 h_max=2 %}
+        </div>
+        <div class="col-9" style="">
+            <div class="text-center icon-button">
+                <h1 class="">{{page.title}}</h1>
+                <a class="" onclick="javascript:history.back(-1);">
+                    <i class="fa fa-angle-left fa-2x"></i>
+                </a>
+            </div>
+            <div>
+
+            </div>
+            <div style="font-size: 100%">
+                <a style="color:black;text-decoration: none;" href="{{site.url}}{{site.baseurl}}/category?category={{page.category}}">{{page.category}}</a>
+                <i class="fa fa-clock-o" aria-hidden="true"></i>{{page.date|date:"%Y/%m/%d %H:%m"}}
+            </div>
+            <div class="content">
+                {{ content }}
+            </div>
+
+            {% include share.html %}
+            {% include reward.html %}
+
+            {% include discuss.html %}
+        </div>
+    </div>
+</div>
+
+{% include footer.html %}
+</body>
+</html>

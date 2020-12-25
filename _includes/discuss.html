@@ -1,0 +1,19 @@
+<!-- Gitalk 评论 start  -->
+<!-- Link Gitalk 的支持文件  -->
+<link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/gitalk/1.7.0/gitalk.css">
+<script src="{{site.url}}{{site.baseurl}}/assets/gitalk/1.7.0/gitalk.min.js"></script>
+<div id="gitalk-container"></div>
+<script type="text/javascript">
+
+    var gitalk = new Gitalk({
+        // gitalk的主要参数
+        clientID: '{{site.client_id}}',
+        clientSecret: '{{site.secret}}',
+        repo: '{{site.repo}}',
+        owner: '{{site.owner}}',
+        admin: '{{site.admin}}',
+        id: md5(location.pathname),
+    });
+    gitalk.render('gitalk-container');
+</script>
+<!-- Gitalk end -->

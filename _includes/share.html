@@ -1,0 +1,19 @@
+<!--分享-->
+<div class="d-flex">
+    <div class="mr-auto share-a">
+        {% for tag in page.tags %}
+        <a href="{{site.url}}{{site.baseurl}}/archive/?tag={{ tag }}">
+            <span>{{ tag }}</span>
+        </a>
+        {% unless forloop.last %}{% endunless %}{% endfor %}
+    </div>
+    <div class="ml-auto share-a">
+        <a href="http://connect.qq.com/widget/shareqq/index.html?url={{site.url}}{{site.baseurl}}{{ page.url }}&title={{ page.title }}">
+            <span><i class="fa fa-qq"></i>QQ分享</span>
+        </a>
+        <a href="http://service.weibo.com/share/share.php?title={{site.url}}{{site.baseurl}}{{ page.url }}">
+            <span><i class="fa fa-weibo"></i>微博分享</span>
+        </a>
+    </div>
+</div>
+

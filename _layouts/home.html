@@ -1,0 +1,35 @@
+---
+layout: comperss
+---
+<html lang="en">
+<head>
+    {% include head.html %}
+</head>
+<body>
+<div class="container">
+    <div class="row h-100">
+        <div class="card m-auto wb ">
+            <div class="logo mx-auto">
+                <a href="{{site.url}}{{site.baseurl}}/"><img class="rounded-circle"  src="{{site.url}}{{site.baseurl}}/assets/img/logo.png"></a>
+            </div>
+            <div class="text-center a-button">
+                <a href="{{site.url}}{{site.baseurl}}/"><h3>{{site.title}}</h3></a>
+            </div>
+            <hr class="hr-line" />
+            <div class="text-center a-button">
+                <a href="{{site.url}}{{site.baseurl}}/">{{site.bio}}</a>
+            </div>
+            {% include contact.html %}
+            <hr class="hr-line">
+            <div class="row" style="padding: 20px">
+                <div class="mx-auto nav-button">
+                    <a href="{{site.url}}{{site.baseurl}}/about">关于</a>
+                    <a href="{{site.url}}{{site.baseurl}}/posts" >文章</a>
+                    <a href="{{site.url}}{{site.baseurl}}/projects">分享</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

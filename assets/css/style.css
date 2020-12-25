@@ -1,0 +1,305 @@
+body{
+    width:100%;
+    height:100%;
+    min-width: 973px;
+    min-height: 584px;
+    background-size: 100% 100%;
+    background-image: url(../img/bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    background-attachment: fixed;
+}
+.wb{
+    background-color: white;
+    width: 400px;
+    height: 400px;
+}
+.logo{
+    margin: 10px;
+}
+.logo img{
+    width: 100px;
+    height: 100px;
+    transition: all 1s;
+}
+.logo img:hover{
+    transform: rotate(360deg);
+}
+.a-button a{
+    color:black;
+    text-decoration:none;
+}
+/*---图标按钮begin---*/
+.icon-button a{
+    width:44px;
+    height:44px;
+    text-decoration:none;
+    border-radius:5px;
+    color:black;
+    margin-right:5px;
+}
+.icon-button a:hover i{
+    background-color: gainsboro
+}
+.icon-button a i{
+    width:44px;
+    height:44px;
+    border: 1px solid;
+    border-color:gainsboro;
+    border-radius:5px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    margin:0px;
+}
+/*---图标按钮end---*/
+/*---导航begin---*/
+.nav-button a{
+    padding: 5px 10px 5px 10px;
+    border: 1px solid;
+    border-radius: 3px;
+    border-color: gainsboro;
+    text-decoration: none;
+    color: black;
+    margin-right:5px;
+}
+.nav-button a:hover{
+    background-color: gainsboro
+}
+/*---导航end---*/
+/*---搜索组件begin---*/
+.search{
+    position: relative;
+    top: 20px;
+    margin: 20px;
+}
+.search a{
+    text-decoration:none;
+    color:black;
+}
+.search a:hover{
+    background-color: gainsboro;
+}
+.pre-scrollable::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 5px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 5px;
+}
+.pre-scrollable::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: #535353;
+}
+.pre-scrollable::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    background: #EDEDED;
+}
+/*---搜索组件end---*/
+/*---标签云begin---*/
+.tag-cloud a{
+    border-radius:10px;
+    border:1px solid;
+    border-color:gainsboro;
+    text-decoration:none;
+    color:black;
+    margin:5px;
+    display: inline-block;
+}
+.tag-cloud a:hover{
+    background-color: gainsboro
+}
+.tag-cloud a span{
+    font-size:10px;
+    color:white;
+    background-color:silver;
+    border-radius:10px;
+    margin-left:-10px;
+    margin-top:-10px;
+    min-width:15px;
+    position:absolute;
+    text-align:center
+}
+/*---标签云end---*/
+/*---分页begin---*/
+.pagination a{
+    color:black;
+    border-radius:3px;
+    border:1px solid;
+    border-color:gainsboro;
+    text-decoration:none;
+    margin: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.pagination a:hover{
+    background-color: gainsboro;
+}
+.pagination span{
+    color:black;
+    border-radius:3px;
+    border:1px solid;
+    border-color:gainsboro;
+    text-decoration:none;
+    margin: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    pointer-events: none;
+}
+.pagination em{
+    color:black;
+    border-radius:3px;
+    border:1px solid;
+    border-color:gainsboro;
+    text-decoration:none;
+    margin: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    pointer-events: none;
+}
+/*---分页end---*/
+.col-left{
+    border-right: 1px rgba(229,230,233,0.5) solid;
+}
+.post-list{
+    height: 90px;
+    padding: 5px;
+    margin: 10px;
+}
+.post-list a{
+    color:black;
+    text-decoration: none;
+}
+
+.excerpt{
+    height: 25px;
+    font-size: 0.875em;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+
+}
+
+.content{
+    margin: 10px;
+}
+/*标题1*/
+.content h1{
+    font-size: 1.75em; /**/
+    font-weight:bold;
+}
+/*标题2*/
+.content h2{
+    font-size: 1.5em;
+    font-weight:bold;
+}
+/*标题3*/
+.content h3{
+    font-size: 1.25em;
+    font-weight:bold;
+}
+/*标题4*/
+.content h4{
+    font-size: 0.875em;
+    font-weight:bold;
+}
+/*正文*/
+.content h5{
+    font-size: 0.875em;
+    text-indent:2em; /*开头空两格*/
+}
+/*---文章导航begin---*/
+.toc{
+    border-right: 1px rgba(229,230,233,0.5) solid
+}
+.toc a{
+    color:black;
+    text-decoration: none;
+}
+.toc a:hover{
+    background-color: gainsboro;
+}
+/*---文章导航end---*/
+/*---分享按钮begin---*/
+.share-a a{
+    border: 1px gainsboro solid;
+    font-size: 10px;
+    margin: 5px;
+    color: black;
+    text-decoration: none;
+    border-radius: 3px;
+}
+.share-a a:hover{
+    background-color: gainsboro;
+}
+/*---分享按钮end---*/
+/*---文章列表隐藏begin---*/
+.post-none{
+    display: none;
+}
+/*---文章列表隐藏end---*/
+/*---文章列表进入动画begin---*/
+.animated{
+    -webkit-animation-duration:1s;
+    animation-duration:1s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both
+}
+@-webkit-keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+    }
+}
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+    }
+}
+.fadeInLeft {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft
+}
+/*---文章列表进入动画end---*/
+/*---文章分类组件begin---*/
+.category-list{
+    max-height: 340px;
+    overflow-y: scroll;
+    margin: 20px;
+}
+.category-list::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 5px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 5px;
+}
+.category-list::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: #535353;
+}
+.category-list::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    background: #EDEDED;
+}
+.category-list a{
+    color: black;
+    text-decoration: none;
+}
+.category-list a:hover{
+    background-color: gainsboro;
+}
+/*---文章分类组件end---*/

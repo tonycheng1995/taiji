@@ -1,0 +1,16 @@
+<div style="margin-top: 5px">
+    <h5>标签</h5>
+    <div class="tag-cloud">
+        <a href="{{ site.baseurl }}/archive/">全部<span>{{site.posts.size}}</span></a>
+        {% capture tags %}
+            {% for tag in site.tags %}
+            <a data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}"
+               href="{{ site.baseurl }}/archive/?tag={{ tag[0] | url_encode }}"
+               title="{{ tag[0] }}"
+               rel="{{ tag[1].size }}">{{ tag[0] }}<span>{{ tag[1].size }}</span></a>
+            {% endfor %}
+        {% endcapture %}
+        {{ tags | split:'__SEPARATOR__' | sort }}
+    </div>
+</div>
+
